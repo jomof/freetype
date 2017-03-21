@@ -3,12 +3,14 @@ matrix:
   include: 
   - os: linux
     script:
+    - chmod +x cdep
     - ./cmakeify --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0} --target-os android
-    - chmod +x cdep && ./cdep
+    - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake --target-os android
   - os: osx
     script:
+    - chmod +x cdep
     - ./cmakeify --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0} --target-os iOS
-    - chmod +x cdep && ./cdep
+    - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake --target-os iOS
     
