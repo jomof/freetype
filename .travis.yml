@@ -8,7 +8,7 @@ matrix:
     - chmod +x cdep cmakeify
     - wget https://github.com/hunter-packages/freetype/archive/v2.6.2-p0.tar.gz
     - tar -xvzf v2.6.2-p0.tar.gz
-    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} 
+    - ./cmakeify --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0} 
     - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake
 
