@@ -68,9 +68,9 @@
 #   only if it is available.  Example:
 #
 #     cmake ... -DWITH_ZLIB=ON -DWITH_HarfBuzz=OFF ...
-
-
 cmake_minimum_required(VERSION 3.0)
+include(CheckIncludeFile)
+
 # CMAKE_TOOLCHAIN_FILE must be set before `project' is called, which
 # configures the base build environment and references the toolchain file
 if (APPLE)
@@ -176,9 +176,9 @@ macro(add_package package use_hunter)
 endmacro()
 
 # Packages which are already hunterized we add using Hunter
-add_package(ZLIB 1)
-add_package(BZip2 1)
-add_package(PNG 1)
+add_package(ZLIB 0)
+add_package(BZip2 0)
+add_package(PNG 0)
 
 # Harf Buzz is not hunterized yet
 add_package(HarfBuzz 0)
