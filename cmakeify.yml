@@ -1,6 +1,8 @@
 targets: [iOS, android]
 android:
-  lib: libfreetyped.a
+  lib: libfreetype.a
+  flavors:
+    debug: -DCMAKE_BUILD_TYPE=Debug
   ndk:
     runtimes: [c++, gnustl, stlport]
     platforms: [12, 21]
