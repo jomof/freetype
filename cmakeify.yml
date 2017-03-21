@@ -1,5 +1,5 @@
 targets: [iOS, android]
-includes: [extra-includes]
+includes: [include]
 android:
   lib: libfreetype.a
   flavors:
