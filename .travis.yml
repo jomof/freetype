@@ -1,7 +1,4 @@
 language: c++
-script:
-
-
 matrix: 
   include: 
   - env: TARGET_OS=android
@@ -9,36 +6,10 @@ matrix:
     os: linux
     script:
     - chmod +x cdep cmakeify
-    - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
-    - unzip sqlite-amalgamation-3160200.zip
-    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os android
-    - cat build/zips/cdep-manifest.yml
+    - wget https://github.com/hunter-packages/freetype/archive/v2.6.2-p0.tar.gz
+    - tar -xvzf v2.6.2-p0.tar.gz
+    - ./cmakeify --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0} 
     - ./cdep
-    - ./cmakeify -wf .cdep/examples/cmake --target-os android
-    
-#  - env: TARGET_OS=linux
-#    addons: 
-#      apt: 
-#        packages: [g++-4.8, clang-3.6]
-#        sources: 
-#        - ubuntu-toolchain-r-test
-#        - llvm-toolchain-precise-3.6
-#    jdk: oraclejdk7
-#    os: linux
-#    script:
-#    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os linux
-#    - ./cdep
-#    - ./cmakeify -wf .cdep/examples/cmake --target-os linux
-    
-  - env: TARGET_OS=iOS
-    os: osx
-    script:    
-    - chmod +x cdep cmakeify
-    - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
-    - unzip sqlite-amalgamation-3160200.zip
-    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os iOS
-    - cat build/zips/cdep-manifest.yml
-    - ./cdep
-    - ./cmakeify -wf .cdep/examples/cmake --target-os iOS    
+    - ./cmakeify -wf .cdep/examples/cmake
 
 

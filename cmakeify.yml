@@ -1,15 +1,21 @@
 targets: [iOS, android]
 android:
-  lib: libsqlite.a
+  lib: libfreetype.a
   ndk:
     runtimes: [c++, gnustl, stlport]
     platforms: [12, 21]
 iOS:
-  lib: libsqlite.a
+  lib: libfreetype.a
 example: |
-   #include <sqlite3.h>
-   void test() {
-     sqlite3_initialize();
-   }
-   
+  #include <ft2build.h>
+  #include FT_FREETYPE_H
+  int main() {
+    FT_Library library;
+    FT_Error error;
+    error = FT_Init_FreeType(&library);
+    if (error) {
+      return EXIT_FAILURE;
+    }
+    return EXIT_SUCCESS;
+  }
 

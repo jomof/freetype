@@ -71,16 +71,6 @@
 
 
 cmake_minimum_required(VERSION 3.0)
-
-include("cmake/HunterGate.cmake")
-HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.12.33.tar.gz"
-    SHA1 "f64eda11326e12d84b6aa7f4aed80c09c182aa64"
-)
-
-include(CheckIncludeFile)
-
-
 # CMAKE_TOOLCHAIN_FILE must be set before `project' is called, which
 # configures the base build environment and references the toolchain file
 if (APPLE)
