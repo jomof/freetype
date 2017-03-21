@@ -1,15 +1,17 @@
 language: c++
 matrix: 
   include: 
-  - env: TARGET_OS=android
-    jdk: oraclejdk7
-    os: linux
+  - os: linux
     script:
-    - chmod +x cdep cmakeify
-    # - wget https://github.com/hunter-packages/freetype/archive/v2.6.2-p0.tar.gz
-    # - tar -xvzf v2.6.2-p0.tar.gz
-    - ./cmakeify --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0} 
+#    - chmod +x cdep cmakeify
+    - ./cmakeify --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0} --target-os android
     - ./cdep
-    - ./cmakeify -wf .cdep/examples/cmake
+    - ./cmakeify -wf .cdep/examples/cmake --target-os android
+  - os: osx
+    script:
+    - ./cmakeify --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0} --target-os iOS
+    - ./cdep
+    - ./cmakeify -wf .cdep/examples/cmake --target-os iOS
+    
 
 
