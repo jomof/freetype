@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/jomof/sqlite.svg?branch=master)](https://travis-ci.org/jomof/sqlite)
-[![CDep Status](https://cdep-io.github.io/com.github.jomof/sqlite/latest/latest.svg)](https://github.com/jomof/sqlite/releases/latest)
+[![Build Status](https://travis-ci.org/jomof/freetype.svg?branch=master)](https://travis-ci.org/jomof/freetype)
+[![CDep Status](https://cdep-io.github.io/com.github.jomof/freetype/latest/latest.svg)](https://github.com/jomof/freetype/releases/latest)
 
-# CDep SqlLite package
+# CDep Freetype package
 
 
 
