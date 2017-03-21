@@ -1,0 +1,4 @@
+builders: [cmake, cmakeExamples]
+
+dependencies:
+- compile: ./build/zips/cdep-manifest.yml
