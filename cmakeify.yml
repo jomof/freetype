@@ -1,14 +1,12 @@
 targets: [iOS, android]
+buildTarget: freetpe
 includes: [include]
 android:
-  lib: libfreetype.a
   flavors:
     debug: -DCMAKE_BUILD_TYPE=Release
   ndk:
     runtimes: [c++, gnustl, stlport]
     platforms: [12, 21]
-iOS:
-  lib: libfreetype.a
 example: |
   #include <ft2build.h>
   #include FT_FREETYPE_H
