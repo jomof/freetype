@@ -1,5 +1,5 @@
 targets: [iOS, android]
-buildTarget: freetpe
+buildTarget: freetype
 includes: [include]
 android:
   flavors:
