@@ -1,4 +1,5 @@
 language: c++
+
 matrix: 
   include: 
   - os: linux
@@ -7,6 +8,7 @@ matrix:
     - ./cmakeify --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0} --target-os android
     - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake --target-os android
+    
   - os: osx
     script:
     - chmod +x cdep
