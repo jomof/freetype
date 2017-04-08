@@ -1,5 +1,6 @@
 targets: [iOS, android]
 badges: no
+include: [include]
 android:
   ndk:
     versions: [r13b]
