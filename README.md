@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jomof/freetype.svg?branch=master)](https://travis-ci.org/jomof/freetype)[![Freetype Status](https://cdep-io.github.io/com.github.jomof/freetype/latest/latest.svg)](https://github.com/jomof/freetype/releases/latest)
+[![Build Status](https://travis-ci.org/jomof/freetype.svg?branch=master)](https://travis-ci.org/jomof/freetype)  [![Freetype Status](https://cdep-io.github.io/com.github.jomof/freetype/latest/latest.svg)](https://github.com/jomof/freetype/releases/latest)
 
 # This is a CDep-ized fork of FreeType
 See https://github.com/jomof/cdep-android-studio-freetype-sample for an example of how to use it on Android.
