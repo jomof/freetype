@@ -1,3 +1,11 @@
+[![Build Status](https://travis-ci.org/jomof/freetype.svg?branch=master)](https://travis-ci.org/jomof/freetype)
+
+[![Freetype Status](https://cdep-io.github.io/com.github.jomof/freetype/latest/latest.svg)](https://github.com/jomof/freetype/releases/latest)
+
+# This is a CDep-ized fork of FreeType
+See https://github.com/jomof/cdep-android-studio-freetype-sample for an example of how to use it on Android.
+
+
   FreeType 2.6.2
   ==============
 
@@ -80,10 +88,3 @@ license,  LICENSE.TXT.  By  continuing to  use, modify,  or distribute
 this file you  indicate that you have read  the license and understand
 and accept it fully.
 
-
---- end of README ---
-<<<<<<< HEAD
-=======
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
->>>>>>> 741b930e39b588545ed802b256531d1c58905575
